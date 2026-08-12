@@ -42,16 +42,19 @@ Também há uma pasta de **demonstração** já pronta em
 
 ## Paleta do tema escuro
 
-| Uso              | Cor       | RGB              |
-|------------------|-----------|------------------|
-| Fundo principal  | `#1E1E1E` | 30, 30, 30       |
-| Fundo alternado  | `#2D2D30` | 45, 45, 48       |
-| Cabeçalho        | `#2A2A2A` | 42, 42, 42       |
-| Texto claro      | `#F2F2F2` | 242, 242, 242    |
-| Azul de acento   | `#4FC3F7` | 79, 195, 247     |
-| Verde            | `#81C784` | 129, 199, 132    |
-| Laranja          | `#FFB74D` | 255, 183, 77     |
-| Bordas suaves    | `#3F3F3F` | 63, 63, 63       |
+| Uso                | Cor       | RGB              |
+|--------------------|-----------|------------------|
+| Fundo principal    | `#18191D` | 24, 25, 29       |
+| Fundo alternado (zebra) | `#1F2127` | 31, 33, 39  |
+| Cabeçalho          | `#212530` | 33, 37, 48       |
+| Texto              | `#E4E6EB` | 228, 230, 235    |
+| Texto forte        | `#FFFFFF` | 255, 255, 255    |
+| Azul de acento     | `#3B82F6` | 59, 130, 246     |
+| Grade sutil        | `#2A2E38` | 42, 46, 56       |
+
+Estilo moderno: fundo grafite levemente azulado, **zebra** nas linhas,
+cabeçalho com **borda de acento** e **congelamento**, texto off-white suave
+e fonte **Segoe UI**.
 
 ---
 

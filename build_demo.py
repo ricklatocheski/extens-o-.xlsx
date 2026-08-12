@@ -21,13 +21,14 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DIST_DIR = os.path.join(BASE_DIR, "dist")
 OUTPUT = os.path.join(DIST_DIR, "DemoTemaEscuro.xlsx")
 
-# Paleta (identica ao tema .thmx e ao suplemento VBA)
-FUNDO = "1E1E1E"
-FUNDO_ALT = "2D2D30"
-CABECALHO = "2A2A2A"
-TEXTO = "F2F2F2"
-ACENTO = "4FC3F7"
-BORDA = "3F3F3F"
+# Paleta moderna (identica ao tema .thmx e ao suplemento VBA)
+FUNDO = "18191D"
+FUNDO_ALT = "1F2127"
+CABECALHO = "212530"
+TEXTO = "E4E6EB"
+TEXTO_FORTE = "FFFFFF"
+ACENTO = "3B82F6"
+GRADE = "2A2E38"
 
 
 def main():
@@ -36,13 +37,14 @@ def main():
     wb = Workbook()
     ws = wb.active
     ws.title = "Demonstracao"
-    ws.sheet_view.showGridLines = False
+    ws.sheet_view.showGridLines = False   # grade propria desligada; usamos zebra
     ws.sheet_properties.tabColor = ACENTO
 
     fundo = PatternFill("solid", fgColor=FUNDO)
     fundo_alt = PatternFill("solid", fgColor=FUNDO_ALT)
     cab = PatternFill("solid", fgColor=CABECALHO)
-    borda = Border(*[Side(style="thin", color=BORDA)] * 4)
+    grade = Border(*[Side(style="thin", color=GRADE)] * 4)
+    borda_acento = Border(bottom=Side(style="medium", color=ACENTO))
 
     dados = [
         ("Produto", "Categoria", "Preco", "Estoque"),
@@ -51,30 +53,36 @@ def main():
         ("Mouse", "Perifericos", 79.90, 54),
         ("Notebook", "Computadores", 4299.00, 7),
         ("Webcam", "Perifericos", 199.90, 21),
+        ("Headset", "Audio", 349.90, 18),
+        ("Cadeira", "Moveis", 1290.00, 5),
     ]
 
     for r, linha in enumerate(dados, start=1):
         for c, valor in enumerate(linha, start=1):
             cel = ws.cell(row=r, column=c, value=valor)
-            cel.border = borda
             cel.alignment = Alignment(vertical="center")
             if r == 1:
                 cel.fill = cab
-                cel.font = Font(name="Calibri", color=ACENTO, bold=True, size=12)
+                cel.font = Font(name="Segoe UI", color=TEXTO_FORTE, bold=True, size=11)
+                cel.border = borda_acento
             else:
-                cel.fill = fundo if r % 2 == 0 else fundo_alt
-                cel.font = Font(name="Calibri", color=TEXTO)
+                cel.fill = fundo_alt if r % 2 == 0 else fundo
+                cel.font = Font(name="Segoe UI", color=TEXTO, size=10)
+                cel.border = grade
 
-    # Preenche uma margem extra de celulas para dar o efeito de "modo escuro"
+    # Margem extra de celulas escuras para o efeito de "modo escuro"
     for r in range(1, 30):
         for c in range(1, 8):
             cel = ws.cell(row=r, column=c)
             if cel.fill.fgColor.rgb in (None, "00000000"):
                 cel.fill = fundo
 
+    ws.row_dimensions[1].height = 24
     widths = {"A": 16, "B": 16, "C": 12, "D": 12}
     for col, w in widths.items():
         ws.column_dimensions[col].width = w
+
+    ws.freeze_panes = "A2"   # congela o cabecalho
 
     wb.save(OUTPUT)
     print(f"[OK] Demonstracao gerada: {OUTPUT}")

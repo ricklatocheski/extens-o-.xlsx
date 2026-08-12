@@ -3,50 +3,50 @@
   <a:themeElements>
     <a:clrScheme name="Escuro">
       <a:dk1>
-        <a:srgbClr val="F2F2F2"/>
+        <a:srgbClr val="E4E6EB"/>
       </a:dk1>
       <a:lt1>
-        <a:srgbClr val="1E1E1E"/>
+        <a:srgbClr val="18191D"/>
       </a:lt1>
       <a:dk2>
-        <a:srgbClr val="D9D9D9"/>
+        <a:srgbClr val="C7CCD1"/>
       </a:dk2>
       <a:lt2>
-        <a:srgbClr val="2D2D30"/>
+        <a:srgbClr val="212530"/>
       </a:lt2>
       <a:accent1>
-        <a:srgbClr val="4FC3F7"/>
+        <a:srgbClr val="3B82F6"/>
       </a:accent1>
       <a:accent2>
-        <a:srgbClr val="81C784"/>
+        <a:srgbClr val="22C55E"/>
       </a:accent2>
       <a:accent3>
-        <a:srgbClr val="FFB74D"/>
+        <a:srgbClr val="F59E0B"/>
       </a:accent3>
       <a:accent4>
-        <a:srgbClr val="BA68C8"/>
+        <a:srgbClr val="A855F7"/>
       </a:accent4>
       <a:accent5>
-        <a:srgbClr val="4DD0E1"/>
+        <a:srgbClr val="06B6D4"/>
       </a:accent5>
       <a:accent6>
-        <a:srgbClr val="F06292"/>
+        <a:srgbClr val="EC4899"/>
       </a:accent6>
       <a:hlink>
-        <a:srgbClr val="64B5F6"/>
+        <a:srgbClr val="60A5FA"/>
       </a:hlink>
       <a:folHlink>
-        <a:srgbClr val="9575CD"/>
+        <a:srgbClr val="A78BFA"/>
       </a:folHlink>
     </a:clrScheme>
     <a:fontScheme name="Escuro">
       <a:majorFont>
-        <a:latin typeface="Calibri"/>
+        <a:latin typeface="Segoe UI"/>
         <a:ea typeface=""/>
         <a:cs typeface=""/>
       </a:majorFont>
       <a:minorFont>
-        <a:latin typeface="Calibri"/>
+        <a:latin typeface="Segoe UI"/>
         <a:ea typeface=""/>
         <a:cs typeface=""/>
       </a:minorFont>
