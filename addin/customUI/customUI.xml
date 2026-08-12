@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+  Personalizacao da Faixa de Opcoes (Ribbon) para o Excel 2007.
+  Adiciona uma guia "Tema Escuro" com botoes que chamam as
+  macros do modulo DarkThemeAddin.
+
+  Insira este XML no arquivo .xlam usando o "Custom UI Editor for
+  Microsoft Office" (parte: customUI/customUI.xml) - veja o README.
+-->
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui">
+  <ribbon>
+    <tabs>
+      <tab id="tabTemaEscuro" label="Tema Escuro">
+        <group id="grpTema" label="Modo Escuro">
+          <button id="btnAplicar"
+                  label="Aplicar (planilha)"
+                  size="large"
+                  imageMso="ThemeColorsGallery"
+                  onAction="RibbonAplicar"
+                  screentip="Aplica o tema escuro na planilha ativa"/>
+          <button id="btnAplicarTodas"
+                  label="Aplicar (tudo)"
+                  size="large"
+                  imageMso="ThemesGallery"
+                  onAction="RibbonAplicarTodas"
+                  screentip="Aplica o tema escuro em todas as planilhas da pasta"/>
+          <button id="btnRemover"
+                  label="Remover"
+                  size="large"
+                  imageMso="ThemeResetToOffice"
+                  onAction="RibbonRemover"
+                  screentip="Restaura o visual claro padrao"/>
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>

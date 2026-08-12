@@ -1,0 +1,4 @@
+# Saídas binárias empacotadas (ZIP/OPC) — tratar como binário
+*.thmx binary
+*.xlsx binary
+*.xlam binary
