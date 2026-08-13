@@ -1,0 +1,53 @@
+<title>Prévia E-mail Escuro</title>
+<style>
+  :root { --fundo:#0F1115; --cartao:#171A21; --rodape:#12141A; --texto:#E4E6EB;
+          --suave:#9CA3AF; --borda:#262B36; --azul:#3B82F6; --roxo:#A855F7; }
+  body { margin:0; background:var(--fundo); font-family:'Segoe UI',Arial,sans-serif; }
+  .wrap { padding:24px 12px; display:flex; justify-content:center; }
+  .card { max-width:600px; width:100%; background:var(--cartao);
+          border:1px solid var(--borda); border-radius:16px; overflow:hidden;
+          box-shadow:0 20px 60px rgba(0,0,0,.5); }
+  .head { background:linear-gradient(135deg,var(--azul),var(--roxo));
+          padding:34px 28px; position:relative; overflow:hidden; }
+  /* Animação SÓ na prévia (o navegador roda; e-mail não roda) */
+  .head::after { content:''; position:absolute; inset:-50%;
+                 background:linear-gradient(120deg,transparent,rgba(255,255,255,.18),transparent);
+                 transform:translateX(-100%); animation:shine 3.2s ease-in-out infinite; }
+  @keyframes shine { 0%{transform:translateX(-100%)} 60%,100%{transform:translateX(120%)} }
+  .h1 { font-size:26px; font-weight:700; color:#fff; margin:0; }
+  .sub { font-size:14px; color:#EEF2FF; margin-top:6px; }
+  .body { padding:28px; }
+  .p { font-size:16px; line-height:1.7; color:var(--texto); margin:0; }
+  .btn { display:inline-block; margin:26px 0;
+         background:linear-gradient(135deg,var(--azul),var(--roxo));
+         color:#fff; text-decoration:none; font-weight:600; font-size:15px;
+         padding:13px 26px; border-radius:10px; transition:transform .15s ease;
+         box-shadow:0 8px 24px rgba(59,130,246,.4); }
+  .btn:hover { transform:translateY(-2px) scale(1.02); }
+  .tip { font-size:13px; color:var(--suave); }
+  .bar { height:5px; background:linear-gradient(90deg,var(--azul),#22C55E,#F59E0B,var(--roxo));
+         background-size:300% 100%; animation:flow 6s linear infinite; }
+  @keyframes flow { 0%{background-position:0% 50%} 100%{background-position:300% 50%} }
+  .foot { padding:18px 28px; background:var(--rodape); font-size:12px; color:#6B7280; }
+  .note { max-width:600px; margin:14px auto 0; color:var(--suave); font-size:12px;
+          text-align:center; }
+</style>
+<div class="wrap">
+  <div class="card">
+    <div class="head">
+      <div class="h1">Olá! ✨🌙</div>
+      <div class="sub">Uma mensagem com visual escuro e moderno</div>
+    </div>
+    <div class="body">
+      <p class="p">Escreva sua mensagem aqui. Este modelo já vem com fundo
+        escuro, texto claro e um toque colorido pra deixar tudo mais animado.</p>
+      <a href="#" class="btn">👉 Clique aqui</a>
+      <div class="tip">Dica: para movimento de verdade no e-mail, use um GIF
+        animado (as animações de CSS não funcionam nos leitores de e-mail).</div>
+    </div>
+    <div class="bar"></div>
+    <div class="foot">Enviado com 💙 • Tema Escuro Animado</div>
+  </div>
+</div>
+<div class="note">Prévia no navegador (com animação). No e-mail enviado, o
+  layout e as cores aparecem; o brilho/movimento é só aqui — no e-mail, use GIF.</div>
